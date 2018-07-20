@@ -21,3 +21,4 @@
         </form>
     </div>
 </div>
+<?require_once("footer.php")?>

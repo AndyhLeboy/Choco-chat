@@ -1,0 +1,17 @@
+.logo{
+    width: 10%!important;
+}
+
+body{
+    background-image: url(ceystalhorizon.png);
+    background-size: cover;
+} 
+form label{
+    color: #fff;
+}
+
+form .btn{
+    width: 100%!important;
+    background:transparent;
+    border: solid #fff 1px;
+}

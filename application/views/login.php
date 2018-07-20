@@ -1,4 +1,7 @@
-<? require_once("header.php")?>
+
+
+
+<?php require_once("header.php");?>
 <title>register</title>
 </head>
 <body>

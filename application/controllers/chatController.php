@@ -5,6 +5,7 @@ class ChatController extends CI_Controller
 	function __construct(){
 		parent::__construct();
 		$this->load->library('session');
+
 	}
 
 	function index(){
@@ -24,9 +25,9 @@ class ChatController extends CI_Controller
 	}
 
 	function receive_messages(){
+		
 		$this->load->helper('url');
 
-		$jsonString = file_get_contents('jsonFile.json');
 
 		$data = json_decode($jsonString, true);
 		// Receive a message sent via webSocket
@@ -41,14 +42,19 @@ class ChatController extends CI_Controller
 		$new_message = $this->input->post('message');
 
 		array_push( $messages , array('username'=>$username  , 'message'=>$new_message));
-		$newJsonString = json_encode()
 
-		file_put_contents('jsonFile.json', $newJsonString);
+		$newJsonString = json_encode();
+
+		file_put_contents('messageLog.json', $newJsonString);
 
 		return;
 	}
 
-	function get_messages{
+	function get_messages(){
+		
+		$message_log = "http://localhost/messageLog.json";
+
+
 
 	}
 
